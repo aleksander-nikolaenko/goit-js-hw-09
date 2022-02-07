@@ -41,6 +41,7 @@ startBtnRef.addEventListener('click', startBtnHandler);
 
 
 function startBtnHandler() {
+  clearInterval(timerIntervalId);
   selectedTime = calendar.selectedDates[0].getTime();
   let remainTime = selectedTime - Date.now();
   startBtnRef.setAttribute('disabled', true);
